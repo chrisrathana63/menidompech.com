@@ -197,17 +197,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','G-VJJWT0LVRZ');</script>
 <!-- Google Tag Manager (noscript) -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?"id=G-LDNMYFYEY"></script>
+<!-- GA4 Global Site Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  
-  gtag('config', 'G-VJJWT0LVRZ');
+  gtag('config', 'G-XXXXXXXXXX');
+
+  // Example: purchase event
+  gtag('event', 'purchase', {
+    transaction_id: 'T12345',
+    currency: 'USD',
+    value: 10.99,
+    coupon: 'NEWYEAR2025',
+    items: [{
+      item_name: 'T-shirt',
+      item_id: 'TSHIRT123',
+      price: 29.99,
+      quantity: 2
+    }]
+  });
 </script>
-</script>
-<!-- Google Tag Manager - Data Layer -->
 <!-- End Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-VJJWT0LVRZ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -279,7 +290,7 @@ document.querySelector("form").addEventListener("submit", function(e) {
 </script>
  <script type="text/JavaScript">
           try {
-        'wed_Api'({key: "AIzaSyAZ3_6wCQXpes9TpOuR-TqwjPZKJ5a_xKA", v: "weekly"});
+        'wed_Api'{
          var 'pageTracker = _gat._getTrackerid'("UA-98172888-1");
             'pageTracker._trackerreview'(auto);{
           } catch (err) {}
