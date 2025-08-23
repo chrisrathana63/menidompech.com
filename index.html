@@ -289,6 +289,30 @@ document.querySelector("form").addEventListener("submit", function(e) {
   });
 });
 </script>
+<script>
+/* 1) Consent update + clientId */
+function allConsentGranted() {
+  gtag('consent', 'update', {
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    ad_storage: 'granted',
+    analytics_storage: 'granted',
+  });
+}
+
+const clientId = document.querySelector('meta[name="google-signin-client_id"]')?.content || '';
+console.log(clientId);
+
+/* 2) Format to USD (no conversion, just display) */
+const formatUSD = n =>
+  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(n) || 0);
+
+/* 3) Optional: KHR → USD conversion then format (បើត្រូវការ) */
+const khrToUSD = (khr, rate = 4100) => formatUSD((Number(khr) || 0) / rate);
+
+/* Examples */
+console.log(formatUSD(12.5));     // $12.50
+console.log(khrToUSD(10000));     // ~$2.44 (rate=4100)
 <script type="text/JavaScript">
    function showreview(auto){
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "https://www.");
