@@ -1,0 +1,6 @@
+Algorithm: Argon2id
+Memory:    ≥ 64 MB
+Time cost: ≥ 2 iterations
+Parallel:  ≥ 2
+Salt:      ≥ 16 bytes (random)
+Pepper:    Optional (env secret)
